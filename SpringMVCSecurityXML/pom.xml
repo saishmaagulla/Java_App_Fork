@@ -155,5 +155,16 @@
             </plugin>
         </plugins>
     </build>        
-     
+     <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>gcp-one-click-poc-releases</name>
+        <url>http://35.226.89.105:8081/artifactory/saishma-maven1</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>gcp-one-click-poc-snapshots</name>
+        <url>http://35.226.89.105:8081/artifactory/saishma-maven1</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
