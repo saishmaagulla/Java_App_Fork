@@ -7,7 +7,7 @@
   <groupId>org.o7planning</groupId>
   <artifactId>SpringMVCSecurityXML</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT-${v}</version>
+  <version>0.0.1-SNAPSHOT-${build_number}</version>
   <name>SpringMVCSecurityXML Maven Webapp</name>
   <url>http://maven.apache.org</url>
  
