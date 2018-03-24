@@ -1,0 +1,4 @@
+stage 'build'
+node {
+sh mvn clean install
+}
