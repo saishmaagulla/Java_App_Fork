@@ -8,4 +8,4 @@ WORKDIR java-app
 ADD * ./
 RUN ls
 RUN mvn clean install
-RUN cp target/SpringMVCSecurityXML.war /var/lib/tomcat8/webapps/saishma.war
+CMD cp target/SpringMVCSecurityXML.war /var/lib/tomcat8/webapps/saishma.war
