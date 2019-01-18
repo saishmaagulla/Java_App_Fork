@@ -13,7 +13,8 @@ pipeline{
         steps{
         echo 'this is docker build step'
           sh """
-          docker build -t saishma1201/java-poc:1 .
+          sudo docker login -u saishma1201 -p saishma1201
+          sudo docker build -t saishma1201/java-poc:1 .
           """
         }
       }
