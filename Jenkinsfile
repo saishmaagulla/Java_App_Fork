@@ -30,6 +30,7 @@ pipeline{
       stage('update the kubernetes image') {
         steps{
           sh """
+          sudo su
           kubectl get deployments
           """
         }
