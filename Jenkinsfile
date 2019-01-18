@@ -27,7 +27,7 @@ pipeline{
           """
         }
       }
-      tage('update the kubernetes image') {
+      stage('update the kubernetes image') {
         steps{
           sh """
           kubectl set image deployment.v1.apps/test-java-dep test-con=saishma1201/java-poc:${BUILD_NUMBER}
