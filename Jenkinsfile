@@ -14,9 +14,9 @@ pipeline{
         echo 'this is docker build step'
           sh """
           sudo docker login -u saishma1201 -p saishma1201
-          sudo docker build -t saishma1201/java-poc:${BUILD_NUMBER} .
-           sudo docker push saishma1201/java-poc:${BUILD_NUMBER}
-          sudo docker rmi saishma1201/java-poc:${BUILD_NUMBER}
+          sudo docker build -t saishma1201/java-poc:\$(git log -1 --pretty=%h) .
+           sudo docker push saishma1201/java-poc:\$(git log -1 --pretty=%h)
+          sudo docker rmi saishma1201/java-poc:\$(git log -1 --pretty=%h)
           """
         }
       }
@@ -35,8 +35,8 @@ pipeline{
           sudo su
           cd ~
           echo "updating the image"
-          echo "kubectl --kubeconfig=config set image deployment/test-java-dep test-con=saishma1201/java-poc:${BUILD_NUMBER}"
-          kubectl --kubeconfig=config set image deployment/test-java-dep test-con=saishma1201/java-poc:${BUILD_NUMBER}
+          echo "kubectl --kubeconfig=config set image deployment/test-java-dep test-con=saishma1201/java-poc:\$(git log -1 --pretty=%h)"
+          kubectl --kubeconfig=config set image deployment/test-java-dep test-con=saishma1201/java-poc:\$(git log -1 --pretty=%h)
           """
         }
       }
