@@ -35,8 +35,8 @@ pipeline{
           sudo su
           cd ~
           echo "updating the image"
-          echo "kubectl --kubeconfig=../config set image deployment/test-java-dep test-con=saishma1201/java-poc:${BUILD_NUMBER}"
-          kubectl --kubeconfig=../config set image deployment/test-java-dep test-con=saishma1201/java-poc:${BUILD_NUMBER}
+          echo "kubectl --kubeconfig=config set image deployment/test-java-dep test-con=saishma1201/java-poc:${BUILD_NUMBER}"
+          kubectl --kubeconfig=config set image deployment/test-java-dep test-con=saishma1201/java-poc:${BUILD_NUMBER}
           """
         }
       }
